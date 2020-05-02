@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XF46ReleaseFeatureTest.Views.VisualMaterialPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="LightBlue"
+    Visual="Material"
+    mc:Ignorable="d">
+
+    <ScrollView>
+        <StackLayout Margin="20" Spacing="10">
+            <ActivityIndicator IsRunning="True" IsVisible="True" />
+            <Button BackgroundColor="OrangeRed" Text="Button" />
+            <CheckBox />
+            <DatePicker Date="2020/04/30" />
+            <Editor AutoSize="TextChanges" Placeholder="Editor" />
+            <Entry Placeholder="Entry" />
+            <Frame BorderColor="Red" />
+            <ProgressBar Progress="0.7" />
+            <Slider Value="0.4" />
+            <Stepper />
+            <TimePicker />
+            <Picker Title="Sample">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Item1</x:String>
+                        <x:String>Item2</x:String>
+                        <x:String>Item3</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="XF46ReleaseFeatureTest.Views.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:XF46ReleaseFeatureTest.Views"
+    mc:Ignorable="d">
+    <Shell.Resources>
+        <ResourceDictionary Source="/Common/GlobalStyles.xaml" />
+    </Shell.Resources>
+    <ShellItem Title="Visual Material" Route="Main">
+        <ShellContent Title="Visual Material" ContentTemplate="{DataTemplate views:VisualMaterialPage}" />
+    </ShellItem>
+    <ShellItem Title="Visual Material2" Route="Main">
+        <ShellContent Title="Visual Material2" ContentTemplate="{DataTemplate views:VisualMaterialPage2}" />
+    </ShellItem>
+    <FlyoutItem Title="Experimental Features" Route="ExperimentalFeatures">
+        <ShellContent Title="Experimental Features" ContentTemplate="{DataTemplate views:ExperimetalFeaturesPage}" />
+    </FlyoutItem>
+</Shell>

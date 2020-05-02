@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XF46ReleaseFeatureTest.Views.ExperimetalFeaturesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:XF46ReleaseFeatureTest.Views"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label Text="{Binding SelectedFruits}" />
+            <RadioButton
+                CheckedChanged="RadioButton_CheckedChanged"
+                GroupName="Size"
+                Text="Small" />
+            <RadioButton
+                CheckedChanged="RadioButton_CheckedChanged"
+                GroupName="Size"
+                Text="Medium" />
+            <RadioButton
+                CheckedChanged="RadioButton_CheckedChanged"
+                GroupName="Size"
+                Text="Large" />
+            <Expander>
+                <Expander.Header>
+                    <StackLayout BackgroundColor="LightYellow">
+                        <Label
+                            BackgroundColor="LightPink"
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            Text="ここが" />
+                        <Label
+                            BackgroundColor="LightBlue"
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            Text="ヘッダーだよ" />
+                    </StackLayout>
+                </Expander.Header>
+                <Grid Padding="10" BackgroundColor="LightGreen">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Image
+                        Aspect="AspectFill"
+                        HeightRequest="120"
+                        Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+                        WidthRequest="120" />
+                    <Label
+                        Grid.Column="1"
+                        FontAttributes="Italic"
+                        Text="Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae." />
+                </Grid>
+            </Expander>
+        </StackLayout>
+
+        <!--<StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Selected:" />
+                <Label Text="{Binding SelectedFruits}" />
+            </StackLayout>
+            <RadioButton
+                CheckedChanged="RadioButton_CheckedChanged"
+                GroupName="fruits"
+                Text="りんご" />
+            <RadioButton
+                CheckedChanged="RadioButton_CheckedChanged"
+                GroupName="fruits"
+                Text="もも" />
+            <RadioButton
+                CheckedChanged="RadioButton_CheckedChanged"
+                GroupName="fruits"
+                Text="さくらんぼ" />
+        </StackLayout>-->
+        <!--<Expander Margin="0,0,0,10" FlexLayout.Basis="100%">
+            <Expander.Header>
+                <StackLayout Margin="0,0,0,6" Orientation="Horizontal">
+                    <Image Source="{StaticResource IconTodaySm}">
+
+                    </Image>
+                    <Label
+                        FontSize="14"
+                        Text="Next Flight: STL to MAUI (5/19/2020)"
+                        TextColor="White" />
+                </StackLayout>
+            </Expander.Header>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="14" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <BoxView
+                    Grid.RowSpan="6"
+                    BackgroundColor="White"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Fill"
+                    WidthRequest="4" />
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="11:20 AM - Depart STL" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="4:05 PM - Arrive SFO" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="4:45 PM - Depart SFO" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Text="10:30 PM - Arrive HNL" />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Text="11:00 PM - Depart HNL" />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Text="11:45 PM - Arrive OGG" />
+            </Grid>
+
+        </Expander>-->
+    </ContentPage.Content>
+</ContentPage>
